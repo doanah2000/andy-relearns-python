@@ -1,0 +1,31 @@
+1. Simple Assignment
+Simple Assignment never copies data. When an old variable is assigned to a new variable, both variables refer to the
+same object. Any changes made using one variable will be reflected in the other variable.
+
+ex:
+>>> rgb = ["Red", "Green", "Blue"]
+>>> rgba = rgb
+>>> id(rgb) == id(rgba) # This is True
+>>> rgba.append("Alph")
+>>> rgb == ["Red", "Green", "Blue", "Alph"]
+
+2. id()
+The `id()` function returns a unique id for a specified object. This id is assigned to the object when the object is
+created, and is the object''s memory address. This id will be different each time a program is run, with the exception
+of objects with a constant unique id (ex: integers from -5 to 256)
+
+ex:
+>>> a = 1 # 4377864496
+>>> b = 2 # 4377864528
+>>> c = b # 4377864528 same as b, playing off of simple assignment
+
+3. len()
+Returns the number of items in an object. The argument may be a sequence(string, bytes, tuple, list, range) or a
+collection (dictionary, set, frozen set)
+
+3. Tricky Slicing
+When slicing an iterable, the new object follows the lower-bound inclusive and upper-bound exclusive pattern
+ex:
+>>> squares = [1, 4, 9, 16, 25]
+>>> squares[0:2] # returns [1, 4], element at the lower bound (index 0) is included up to element right before the
+upper bound (index 1), excluding element at upper bound (index 2)

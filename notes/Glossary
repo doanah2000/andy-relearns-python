@@ -1,0 +1,28 @@
+Deep Copy:
+- A deep copy constructs a new compound object and then, recursively, inserts copies of the objects in the original into
+the copy. Two problems exist with deep copy operations that don't exist in shallow copy operations:
+ 1. Recursive objects (compound objects that, directly or indirectly, contain a reference to themselves) may cause a
+ recursive loop
+ 2. Because deep copy copies everything, it may copy too much, such as data which is intended to be shared between copies
+- These are avoided with the `deepcopy()` function by:
+ 1. keeping a `memo` dictionary of objects already copied during the current copying pass
+ 2. letting user-defined classes override the copying operation or the set of components copied
+
+Iterable
+- An object capable of returning its members one at a time. Examples include all sequence types and some non-sequence
+types such as `dict`, file objects, and objects of classes defined with an `__iter__()` method or with a `__getitem__()`
+method that implements sequence semantics
+
+List:
+- The most versatile compound data type written as a list of comma-separated values between square brackets, with items
+that may be of different types, but usually being of the same type
+
+Sequence:
+- An iterable which supports efficient element access using integer indices via the `__getitem__()` special method and
+defines a `__len()__` method that returns the length of the sequence. Examples of built-in sequence types are `list`,
+`str`, `tuple`, and `bytes`
+
+Shallow Copy:
+- A shallow copy constructs a new compound object and then inserts references to objects found in the original into the
+copy.
+

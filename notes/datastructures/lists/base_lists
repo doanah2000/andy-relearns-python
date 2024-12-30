@@ -1,0 +1,30 @@
+1. Lists can be indexed and sliced, like strings and other built-in sequence types. Using squares = [1, 4, 9, 16, 25] as an
+example.
+
+ex:
+Indexing: squares[0] # returns 1
+Indexing: squares[-1] # indexing backwards returns 25
+Slicing: squares[-3:] # returns a new list: [9, 16, 25]
+Slicing: squares[2:] # returns a new list: [9,16,25]
+
+2. Lists also support concatenation:
+squares + [36, 49, 64, 81, 100] # returns [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+3. Lists are mutable, unlike strings
+squares[2] = 3 # causes squares to be [1, 4, 3, 16, 25]
+squares[2] = 9 # changes squares back to [1, 4, 9, 16, 25]
+
+4. Slice operations return a new list containing the requested elements, resulting in a shallow copy of the list.
+five_square = squares[:]
+five_square[-1] = 81 # set last element in five_square to 81
+five_square # [1, 4, 9, 16, 81]
+square # [1, 4, 9, 16, 25]
+
+5. Assignment to slices is possible, and can even change the size of the list or clear it entirely
+squares[2:5] = [36, 49, 64] # squares is now [1, 4, 36, 49, 64]
+squares[2:5] = [] # removed, squares is now [1, 4]
+squares[:] = [] # removed all, squares is now []
+squares = [1, 4, 9, 16, 25] # repopulation
+
+6. Lists can be nested
+a = [[1, 2, 3], [4, 5, 6]]
