@@ -29,3 +29,8 @@ ex:
 >>> squares = [1, 4, 9, 16, 25]
 >>> squares[0:2] # returns [1, 4], element at the lower bound (index 0) is included up to element right before the
 upper bound (index 1), excluding element at upper bound (index 2)
+
+4. sorted(iterable, /, **, key=None, reverse=False)
+Returns a new sorted list from the items in iterable.
+- key specifies a function off one argument that is used to extract a comparison key from each element in it.
+  (ex: str.lower). Use functools.cmp_to_key() to convert an old-style cmp function to a key function
