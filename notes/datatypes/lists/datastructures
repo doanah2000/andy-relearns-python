@@ -1,0 +1,13 @@
+Lists as Data Structures and Comprehensions
+
+Stack (LIFO)
+- Using `.append` and `.pop`, treating the last element as the top of the stack, with both operations being O(1)
+
+Queue (FIFO)
+- Lists are not efficient, as appends/pops from the end off the list are fast, but inserts and pops at the beginning are
+  not
+- To implement a queue, we use collections.deque, which was designed to have fast appends and pops from both ends.
+
+List Comprehensions
+- Provide a concise way to create lists (do it in one line)
+- ex: even_squares = [x**2 for x in range(10) if x % 2 == 0]
